@@ -14,20 +14,16 @@ class FirstTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "HH:mm:ss"
             self.timeLabel.text = "\(dateFormatter.string(from: Date()))"
         }
-        
     }
-    
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
+    
 }
