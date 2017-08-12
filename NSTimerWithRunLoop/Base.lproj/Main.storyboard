@@ -55,7 +55,7 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E29-6j-fiU">
+                                    <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E29-6j-fiU">
                                         <rect key="frame" x="190" y="40" width="185" height="291"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -122,7 +122,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JBX-0B-nQm">
                                 <rect key="frame" x="0.0" y="336" width="375" height="331"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-10-jdz">
+                                    <tableView clipsSubviews="YES" tag="2" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oNN-10-jdz">
                                         <rect key="frame" x="0.0" y="30" width="121.5" height="301"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -153,7 +153,7 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-e3-scv">
+                                    <tableView clipsSubviews="YES" tag="3" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-e3-scv">
                                         <rect key="frame" x="126.5" y="30" width="122" height="301"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -184,7 +184,7 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ivr-Fv-P5Y">
+                                    <tableView clipsSubviews="YES" tag="4" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ivr-Fv-P5Y">
                                         <rect key="frame" x="253.5" y="30" width="121.5" height="301"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -289,11 +289,11 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dispatchSourceTimerTableView" destination="kgG-e3-scv" id="39I-u4-Lkj"/>
                         <outlet property="displayLinkTableView" destination="ivr-Fv-P5Y" id="fDb-jy-pGu"/>
-                        <outlet property="firstTableView" destination="D02-Mq-wLa" id="Bpx-1P-40R"/>
-                        <outlet property="fourthTableView" destination="kgG-e3-scv" id="INj-Zq-Wyc"/>
-                        <outlet property="secondTableView" destination="E29-6j-fiU" id="ZXH-fi-73s"/>
-                        <outlet property="thirdTableView" destination="oNN-10-jdz" id="BXe-r2-lzh"/>
+                        <outlet property="timerCommonModesTableView" destination="E29-6j-fiU" id="Exe-Yy-kES"/>
+                        <outlet property="timerDefaultModeTableView" destination="D02-Mq-wLa" id="pnQ-A0-QVY"/>
+                        <outlet property="timerSubThreadTableView" destination="oNN-10-jdz" id="3zy-bd-bcI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

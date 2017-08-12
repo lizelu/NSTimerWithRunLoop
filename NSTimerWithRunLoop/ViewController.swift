@@ -7,22 +7,50 @@
 //
 
 import UIKit
+enum TimerTableViewType: Int {
+    case TimerDefaultModeTableViewType = 0
+    case TimerCommonModesTableViewType
+    case TimerSubThreadTableViewType
+    case DispatchSourceTimerTableViewType
+    case DisplayLinkTableViewType
+    
+    var cellReuseId: String {
+        get {
+            switch self {
+            case .TimerDefaultModeTableViewType:
+                return "TimerDefaultModeCell"
+                
+            case .TimerCommonModesTableViewType:
+                return "TimerCommonModesCell"
+                
+            case .TimerSubThreadTableViewType:
+                return "TimerSubThreadCell"
+                
+            case .DispatchSourceTimerTableViewType:
+                return "DispatchSourceTimerCell"
+                
+            case .DisplayLinkTableViewType:
+                return "DisplayLinkCell"
+            }
+        }
+    }
+}
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    @IBOutlet var firstTableView: UITableView!
-    @IBOutlet var secondTableView: UITableView!
-    @IBOutlet var thirdTableView: UITableView!
-    @IBOutlet var fourthTableView: UITableView!
+    @IBOutlet var timerDefaultModeTableView: UITableView!
+    @IBOutlet var timerCommonModesTableView: UITableView!
+    @IBOutlet var timerSubThreadTableView: UITableView!
+    @IBOutlet var dispatchSourceTimerTableView: UITableView!
     
     @IBOutlet var displayLinkTableView: UITableView!
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableDelegate(tableView: firstTableView)
-        configTableDelegate(tableView: secondTableView)
-        configTableDelegate(tableView: thirdTableView)
-        configTableDelegate(tableView: fourthTableView)
+        configTableDelegate(tableView: timerDefaultModeTableView)
+        configTableDelegate(tableView: timerCommonModesTableView)
+        configTableDelegate(tableView: timerSubThreadTableView)
+        configTableDelegate(tableView: dispatchSourceTimerTableView)
         configTableDelegate(tableView: displayLinkTableView)
         print("viewDidLoad -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
@@ -53,20 +81,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        var reuserId = "TimerDefaultModeCell"
-        
-        if tableView === secondTableView {
-            reuserId = "TimerCommonModesCell"
-        } else if tableView === thirdTableView {
-            reuserId = "TimerSubThreadCell"
-        } else if tableView === fourthTableView {
-            reuserId = "DispatchSourceTimerCell"
-        } else if tableView === displayLinkTableView {
-            reuserId = "DisplayLinkCell"
-        }
-        
-        return tableView.dequeueReusableCell(withIdentifier: reuserId)!
+        let tableViewType = TimerTableViewType.init(rawValue: tableView.tag)
+        return tableView.dequeueReusableCell(withIdentifier: (tableViewType?.cellReuseId)!)!
     }
     
     //MARK: - UITableViewDelegate
