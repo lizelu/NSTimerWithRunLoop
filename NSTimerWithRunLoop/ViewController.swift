@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var thirdTableView: UITableView!
     @IBOutlet var fourthTableView: UITableView!
     
+    @IBOutlet var displayLinkTableView: UITableView!
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         configTableDelegate(tableView: secondTableView)
         configTableDelegate(tableView: thirdTableView)
         configTableDelegate(tableView: fourthTableView)
+        configTableDelegate(tableView: displayLinkTableView)
         print("viewDidLoad -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
     
@@ -58,6 +60,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             reuserId = "ThirdTableViewCell"
         } else if tableView === fourthTableView {
             reuserId = "ForthTableViewCell"
+        } else if tableView === displayLinkTableView {
+            reuserId = "DisplayLinkCell"
         }
         
         return tableView.dequeueReusableCell(withIdentifier: reuserId)!

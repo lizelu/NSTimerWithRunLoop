@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F43B84D81F3F09B000583184 /* DisplayLinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43B84D71F3F09B000583184 /* DisplayLinkCell.swift */; };
 		F4F9C27F1F385EE4002EC020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9C27E1F385EE4002EC020 /* AppDelegate.swift */; };
 		F4F9C2811F385EE4002EC020 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F9C2801F385EE4002EC020 /* ViewController.swift */; };
 		F4F9C2841F385EE4002EC020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4F9C2821F385EE4002EC020 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F43B84D71F3F09B000583184 /* DisplayLinkCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayLinkCell.swift; sourceTree = "<group>"; };
 		F4F9C27B1F385EE4002EC020 /* NSTimerWithRunLoop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NSTimerWithRunLoop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4F9C27E1F385EE4002EC020 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F4F9C2801F385EE4002EC020 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 				F4F9C2921F3861A5002EC020 /* SecondTableViewCell.swift */,
 				F4F9C2941F395C8D002EC020 /* ThirdTableViewCell.swift */,
 				F4F9C2961F39625A002EC020 /* ForthTableViewCell.swift */,
+				F43B84D71F3F09B000583184 /* DisplayLinkCell.swift */,
 				F4F9C2821F385EE4002EC020 /* Main.storyboard */,
 				F4F9C2851F385EE4002EC020 /* Assets.xcassets */,
 				F4F9C2871F385EE4002EC020 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4F9C2911F38615F002EC020 /* FirstTableViewCell.swift in Sources */,
+				F43B84D81F3F09B000583184 /* DisplayLinkCell.swift in Sources */,
 				F4F9C2811F385EE4002EC020 /* ViewController.swift in Sources */,
 				F4F9C2951F395C8D002EC020 /* ThirdTableViewCell.swift in Sources */,
 				F4F9C27F1F385EE4002EC020 /* AppDelegate.swift in Sources */,
@@ -318,6 +322,7 @@
 				F4F9C28F1F385EE4002EC020 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
