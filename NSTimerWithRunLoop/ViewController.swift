@@ -22,12 +22,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         configTableDelegate(tableView: secondTableView)
         configTableDelegate(tableView: thirdTableView)
         configTableDelegate(tableView: fourthTableView)
-        print("\(String(describing: RunLoop.current.currentMode))\n\n")
+        print("viewDidLoad -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("\(String(describing: RunLoop.current.currentMode))\n\n")
+        print("viewDidAppear -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
     
     //MARK: - Private Method
@@ -38,7 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     //MARK: - Event Response
     @IBAction func tapShowCurrentModeButton(_ sender: UIButton) {
-        print("\(String(describing: RunLoop.current.currentMode))\n\n")
+        print("tapShowCurrentModeButton -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
     
     //MARK: - UITableViewDataSource
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("\(String(describing: RunLoop.current.currentMode))")
+        print("scrollViewDidScroll -- \(String(describing: RunLoop.current.currentMode!))")
     }
     
     func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
