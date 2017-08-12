@@ -28,7 +28,7 @@
                                         <rect key="frame" x="0.0" y="40" width="185" height="291"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FirstTableViewCell" id="4DR-eI-ckl" customClass="FirstTableViewCell" customModule="NSTimerWithRunLoop">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimerDefaultModeCell" id="4DR-eI-ckl" customClass="TimerDefaultModeCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4DR-eI-ckl" id="BDh-RB-lad">
@@ -59,7 +59,7 @@
                                         <rect key="frame" x="190" y="40" width="185" height="291"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SecondTableViewCell" id="vzg-e3-Jkd" customClass="SecondTableViewCell" customModule="NSTimerWithRunLoop">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimerCommonModesCell" id="vzg-e3-Jkd" customClass="TimerCommonModesCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="185" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vzg-e3-Jkd" id="cOR-52-Zdh">
@@ -126,42 +126,11 @@
                                         <rect key="frame" x="0.0" y="30" width="121.5" height="301"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ThirdTableViewCell" id="Mty-m9-UCn" customClass="ThirdTableViewCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimerSubThreadCell" id="rLZ-VO-pS4" customClass="TimerSubThreadCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="121.5" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Mty-m9-UCn" id="HNG-Pu-Xaf">
-                                                    <rect key="frame" x="0.0" y="0.0" width="121.5" height="43.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1co-dD-qnW">
-                                                            <rect key="frame" x="0.0" y="0.0" width="121.5" height="43.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="1co-dD-qnW" secondAttribute="trailing" id="Xwr-aR-OXY"/>
-                                                        <constraint firstAttribute="bottom" secondItem="1co-dD-qnW" secondAttribute="bottom" id="Y17-rO-2PD"/>
-                                                        <constraint firstItem="1co-dD-qnW" firstAttribute="leading" secondItem="HNG-Pu-Xaf" secondAttribute="leading" id="YoC-73-eTD"/>
-                                                        <constraint firstItem="1co-dD-qnW" firstAttribute="top" secondItem="HNG-Pu-Xaf" secondAttribute="top" id="u1o-Hp-NXs"/>
-                                                    </constraints>
-                                                </tableViewCellContentView>
-                                                <connections>
-                                                    <outlet property="timeLabel" destination="1co-dD-qnW" id="4gm-yX-qw5"/>
-                                                </connections>
-                                            </tableViewCell>
-                                        </prototypes>
-                                    </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-e3-scv">
-                                        <rect key="frame" x="126.5" y="30" width="122" height="301"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ForthTableViewCell" id="rLZ-VO-pS4" customClass="ForthTableViewCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="122" height="44"/>
-                                                <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rLZ-VO-pS4" id="GBD-eQ-gfr">
-                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="121.5" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3N-tI-UgG">
@@ -180,6 +149,37 @@
                                                 </tableViewCellContentView>
                                                 <connections>
                                                     <outlet property="timeLabel" destination="e3N-tI-UgG" id="M97-0I-UMv"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kgG-e3-scv">
+                                        <rect key="frame" x="126.5" y="30" width="122" height="301"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DispatchSourceTimerCell" id="YXE-it-J4z" customClass="DispatchSourceTimerCell" customModule="NSTimerWithRunLoop" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="122" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YXE-it-J4z" id="BQD-Yu-EV0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="122" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uom-tR-o2F">
+                                                            <rect key="frame" x="0.0" y="0.0" width="121.5" height="43.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="uom-tR-o2F" secondAttribute="trailing" id="2Fe-HX-gjn"/>
+                                                        <constraint firstAttribute="bottom" secondItem="uom-tR-o2F" secondAttribute="bottom" id="N6J-Wh-jSs"/>
+                                                        <constraint firstItem="uom-tR-o2F" firstAttribute="top" secondItem="BQD-Yu-EV0" secondAttribute="top" id="tVE-it-DGe"/>
+                                                        <constraint firstItem="uom-tR-o2F" firstAttribute="leading" secondItem="BQD-Yu-EV0" secondAttribute="leading" id="yCc-Mn-uhM"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="timeLabel" destination="uom-tR-o2F" id="4fo-HW-18C"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -215,13 +215,13 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DispatchSource" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-Rk-eRW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Thread NSTimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="DCy-Rk-eRW">
                                         <rect key="frame" x="10" y="0.0" width="118.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sub Thread NSTimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-Z1-Og7">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DispatchSourceTimer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TQl-Z1-Og7">
                                         <rect key="frame" x="133.5" y="0.0" width="118" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>

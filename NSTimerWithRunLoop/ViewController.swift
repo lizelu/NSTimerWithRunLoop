@@ -53,13 +53,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var reuserId = "SecondTableViewCell"
-        if tableView === firstTableView {
-            reuserId = "FirstTableViewCell"
+        
+        var reuserId = "TimerDefaultModeCell"
+        
+        if tableView === secondTableView {
+            reuserId = "TimerCommonModesCell"
         } else if tableView === thirdTableView {
-            reuserId = "ThirdTableViewCell"
+            reuserId = "TimerSubThreadCell"
         } else if tableView === fourthTableView {
-            reuserId = "ForthTableViewCell"
+            reuserId = "DispatchSourceTimerCell"
         } else if tableView === displayLinkTableView {
             reuserId = "DisplayLinkCell"
         }

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThirdTableViewCell: UITableViewCell {
+class DispatchSourceTimerCell: UITableViewCell {
 
     @IBOutlet var timeLabel: UILabel!
     
