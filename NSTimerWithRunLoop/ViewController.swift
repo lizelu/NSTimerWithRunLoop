@@ -45,15 +45,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var dispatchSourceTimerTableView: UITableView!
     
     @IBOutlet var displayLinkTableView: UITableView!
+    
     //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configTableDelegate(tableView: timerDefaultModeTableView)
-        configTableDelegate(tableView: timerCommonModesTableView)
-        configTableDelegate(tableView: timerSubThreadTableView)
-        configTableDelegate(tableView: dispatchSourceTimerTableView)
-        configTableDelegate(tableView: displayLinkTableView)
+        configTableView()
         print("viewDidLoad -- \(String(describing: RunLoop.current.currentMode!))\n\n")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("viewWillAppear -- \(String(describing: RunLoop.current.currentMode!))\n\n")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -62,6 +64,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     //MARK: - Private Method
+    func configTableView() {
+        configTableDelegate(tableView: timerDefaultModeTableView)
+        configTableDelegate(tableView: timerCommonModesTableView)
+        configTableDelegate(tableView: timerSubThreadTableView)
+        configTableDelegate(tableView: dispatchSourceTimerTableView)
+        configTableDelegate(tableView: displayLinkTableView)
+    }
     func configTableDelegate(tableView: UITableView) {
         tableView.delegate = self
         tableView.dataSource = self
