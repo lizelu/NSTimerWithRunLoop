@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 enum TimerTableViewType: Int {
     case TimerDefaultModeTableViewType = 0
     case TimerCommonModesTableViewType
@@ -90,6 +91,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 40
     }
     
+    //MARK: - UIScrollViewDelegate
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print("scrollViewDidScroll -- \(String(describing: RunLoop.current.currentMode!))")
     }
