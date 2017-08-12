@@ -14,6 +14,7 @@ class FirstTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "HH:mm:ss"

@@ -15,17 +15,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet var thirdTableView: UITableView!
     @IBOutlet var fourthTableView: UITableView!
     
+    //MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configTableDelegate(tableView: firstTableView)
         configTableDelegate(tableView: secondTableView)
         configTableDelegate(tableView: thirdTableView)
         configTableDelegate(tableView: fourthTableView)
+        print("\(String(describing: RunLoop.current.currentMode))\n\n")
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("\(String(describing: RunLoop.current.currentMode))\n\n")
+    }
+    
+    //MARK: - Private Method
     func configTableDelegate(tableView: UITableView) {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    //MARK: - Event Response
+    @IBAction func tapShowCurrentModeButton(_ sender: UIButton) {
+        print("\(String(describing: RunLoop.current.currentMode))\n\n")
     }
     
     //MARK: - UITableViewDataSource
@@ -53,6 +66,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //MARK: - UITableViewDelegate
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 40
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print("\(String(describing: RunLoop.current.currentMode))")
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        print("\n\n")
     }
 
     override func didReceiveMemoryWarning() {
