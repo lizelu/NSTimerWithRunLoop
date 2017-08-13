@@ -11,20 +11,32 @@ import UIKit
 class DisplayLinkCell: UITableViewCell {
 
     @IBOutlet var timeLabel: UILabel!
+    var currentTime = ""
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
-        displayLink.add(to: RunLoop.current, forMode: .commonModes)
+        DispatchQueue.global().async {
+            let displayLink = CADisplayLink(target: self, selector: #selector(self.update))
+            displayLink.add(to: RunLoop.current, forMode: .defaultRunLoopMode)
+            RunLoop.current.run()
+        }
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
     func update() {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "HH:mm:ss"
-        self.timeLabel.text = "\(dateFormatter.string(from: Date()))"
+        let time = "\(dateFormatter.string(from: Date()))"
+        
+        if time != currentTime {
+            currentTime = time
+            DispatchQueue.main.async {
+                self.timeLabel.text = self.currentTime
+            }
+        }
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
     }
 
 }

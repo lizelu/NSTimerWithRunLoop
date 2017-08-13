@@ -11,6 +11,7 @@ import UIKit
 class TimerSubThreadCell: UITableViewCell {
 
     @IBOutlet var timeLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         DispatchQueue.global().async {

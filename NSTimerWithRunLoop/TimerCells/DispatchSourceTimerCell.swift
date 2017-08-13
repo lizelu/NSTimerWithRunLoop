@@ -13,7 +13,7 @@ class DispatchSourceTimerCell: UITableViewCell {
     @IBOutlet var timeLabel: UILabel!
     
     override func awakeFromNib() {
-        let queue: DispatchQueue = DispatchQueue.global()
+        let queue: DispatchQueue = DispatchQueue.global()   //也可以用mainQueue来实现
         let source = DispatchSource.makeTimerSource(flags: DispatchSource.TimerFlags(rawValue: 0), queue: queue)
         let timer = UInt64(1) * NSEC_PER_SEC
         
@@ -26,7 +26,7 @@ class DispatchSourceTimerCell: UITableViewCell {
             if(timeout < 0) {
                 source.cancel()
             }
-            
+        
             DispatchQueue.main.async {
                 self.timeLabel.text = "\(dateFormatter.string(from: Date()))"
             }
